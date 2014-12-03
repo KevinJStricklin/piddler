@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicTempServer", "BasicTempServer\BasicTempServer.csproj", "{F913786C-A9D3-4828-B271-56DB5EBB0F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicTempServer.Tests", "..\..\Visual Studio 2013\Projects\BasicTempServer\BasicTempServer.Tests\BasicTempServer.Tests.csproj", "{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{65AEDC30-AA59-4C10-8BBB-8EF0D3EEC600}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F913786C-A9D3-4828-B271-56DB5EBB0F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F913786C-A9D3-4828-B271-56DB5EBB0F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F913786C-A9D3-4828-B271-56DB5EBB0F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F913786C-A9D3-4828-B271-56DB5EBB0F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
