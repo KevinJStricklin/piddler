@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicTempServer.Tests", "..
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{65AEDC30-AA59-4C10-8BBB-8EF0D3EEC600}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTempServer", "ConsoleTempServer\ConsoleTempServer.csproj", "{076546C9-1E3F-4CDA-BFB4-D259971B7425}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF636DBE-D796-4DC8-95F4-C9B31F6835BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{076546C9-1E3F-4CDA-BFB4-D259971B7425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076546C9-1E3F-4CDA-BFB4-D259971B7425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076546C9-1E3F-4CDA-BFB4-D259971B7425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076546C9-1E3F-4CDA-BFB4-D259971B7425}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
