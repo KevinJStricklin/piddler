@@ -11,7 +11,7 @@ namespace ConsoleTempServer
     {
         static void Main(string[] args)
         {
-            string baseUrl = "http://localhost:5000";
+            string baseUrl = "http://*:221";
             using (WebApp.Start<Startup>(baseUrl))
             {
                 Console.WriteLine("Press Enter to quit.");
