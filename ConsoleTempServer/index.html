@@ -3,14 +3,28 @@
 <head>
     <title>Test Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="action.js"></script>
+    <script>
+        function PostsCtrlAjax($scope, $http) {
+            $http({ method: 'GET', url: 'temperature' }).success(function (data) {
+                $scope.posts = data; // response data
+            });
+        }
+    </script>
 </head>
 <body>
-        <div>
-          <label>Name:</label>
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    <hr>
-    <h1>Hello {{yourName}}!</h1>
-    
+    <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
     </div>
+
+    <div id="ng-app" ng-app ng-controller="PostsCtrlAjax">
+
+        <h1>Hello {{posts}}!</h1>
+
+    </div>
+
 </body>
 </html>

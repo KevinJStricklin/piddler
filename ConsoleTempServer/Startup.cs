@@ -43,8 +43,13 @@ namespace ConsoleTempServer
                 else
                 {
                     context.Response.ContentType = "text/html";
-                    if (File.Exists("index.html"))
-                        output = File.ReadAllText("index.html");
+                    string filename = context.Request.Path.ToString().Substring(1);
+                    if (File.Exists(filename))
+                    {
+                        output = File.ReadAllText(filename);
+                        if (Path.GetExtension(filename).ToLower() == "js")
+                            context.Response.ContentType = "application/javascript";
+                    }
                     else
                     {
                         output = "<html><head><title>Error</title></head><body>index.html not found</body></html>";
