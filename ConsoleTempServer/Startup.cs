@@ -29,7 +29,7 @@ namespace ConsoleTempServer
                 {
                     context.Response.ContentType = "application/json";
 
-                    output = string.Format("{0}", rnd.Next(63,79));
+                    output = string.Format("{{ \"temperature\": {0} }}", rnd.Next(63,79));
                 }
                 else if (context.Request.Path.StartsWithSegments(new PathString("/os")))
                 {

@@ -1,33 +1,27 @@
-﻿angular.module('todoApp', [])
-.controller('TodoController', ['$scope', function ($scope) {
-    $scope.todos = [
-              { text: 'learn angular', done: true },
-              { text: 'build an angular app', done: false }];
- 
-    $scope.addTodo = function () {
-      $scope.todos.push({ text: $scope.todoText, done: false });
-      $scope.todoText = '';
-
-    };
- 
-    $scope.remaining = function () {
-      var count = 0;
-      angular.forEach($scope.todos, function (todo) {
-        count += todo.done ? 0 : 1;
-
+﻿angular.module('todoApp', ['ngResource'])
+    .factory('test', function ($resource) {
+        return $resource('/temperature', {}, {
+            query: { method: 'GET', params: {}, isArray: false }
         });
-      return count;
+    })
+    .controller('TodoController', ['$scope', 'test', function ($scope, test) {
+        $scope.todos = [
+            { text: 'learn angular', done: true },
+            { text: 'build an angular app', done: false }
+        ];
 
-    };
- 
-    $scope.archive = function () {
-      var oldTodos = $scope.todos;
-      $scope.todos = [];
-      angular.forEach(oldTodos, function (todo) {
-        if (!todo.done) $scope.todos.push(todo);
+        $scope.temperature = 37;
 
+        test.query(function (response) {
+            $scope.temperature = response;
         });
 
-    };
+        test.get({}, function (resp) {
+            $scope.rtemperature = resp.temperature;
+        });
 
-}]);
+        $scope.addTodo = function () {
+            $scope.todos.push({ text: $scope.todoText, done: false });
+            $scope.todoText = '';
+        };
+    }]);
