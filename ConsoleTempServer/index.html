@@ -7,6 +7,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.min.js"></script>
     <script src="action.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.7/c3.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.7/c3.min.css" rel="stylesheet" type="text/css">
+    <script>
+        var chart;
+    </script>
 </head>
 <body>
     <div ng-controller="TodoController">
@@ -26,5 +32,21 @@
             </li>
         </ul>
     </div>
+
+    <div id="chart"></div>
+    <button type="button" onclick="chart = c3.generate({
+        bindto: '#chart',
+        data: {
+        columns: [
+          ['data1', 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250, 30, 200, 100, 400, 150, 250],
+          ['data2', 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25, 50, 20, 10, 40, 15, 25]
+        ]
+}
+});">Chart it</button>
+    <button type="button" onclick="chart.flow({
+columns: [
+          ['data1', 50, 100, 32, 355, 050, 30],
+          ['data2', 75, 60, 59, 40, 15, 69]]
+})">more data</button>
 </body>
 </html>
